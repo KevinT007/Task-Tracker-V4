@@ -1,36 +1,4 @@
-// Get the modal
-var modal = document.getElementById("id01");
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
-
-import fs from "fs";
-import express from "express";
-import axios from "axios";
-import * as dotenv from "dotenv";
-
-dotenv.config();
-const app = express();
-const port = 5000;
-const apiKey = process.env.APIKEY;
-
-app.get("/", (req, res) => {
-  fs.readFile("./index.html", (err, data) => {
-    res.write(data);
-    res.end();
-  });
-});
-app.get("/api", (req, res) => {
-  fs.readFile("./task.html", (err, data) => {
-    res.write(data);
-    res.end();
-  });
-});
-
+//Make the variables called todos
 window.addEventListener("load", () => {
   todos = JSON.parse(localStorage.getItem("todos")) || [];
   const nameInput = document.querySelector("#name");
@@ -95,7 +63,7 @@ function DisplayTodos() {
     actions.classList.add("actions");
     edit.classList.add("edit");
     deleteButton.classList.add("delete");
-    //Adds the task, edit, and delete action button
+
     content.innerHTML = `<input type="text" value="${todo.content}" readonly>`;
     edit.innerHTML = "Edit";
     deleteButton.innerHTML = "Delete";
@@ -109,7 +77,7 @@ function DisplayTodos() {
     todoItem.appendChild(actions);
 
     todoList.appendChild(todoItem);
-    // Adding tasks to local storage.
+
     if (todo.done) {
       todoItem.classList.add("done");
     }
@@ -117,7 +85,7 @@ function DisplayTodos() {
     input.addEventListener("change", (e) => {
       todo.done = e.target.checked;
       localStorage.setItem("todos", JSON.stringify(todos));
-      // If the button is clicked, then it will be crossed out.
+
       if (todo.done) {
         todoItem.classList.add("done");
       } else {

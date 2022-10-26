@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Manager</title>
     <!-- CSS Import -->
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="task.css" />
     <!-- End of CSS Import -->
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,15 +30,10 @@
 
       <!-- New Todo -->
       <section class="create-todo">
-        <h3>CREATE A TODO</h3>
+        <h3>CREATE A TASK</h3>
         <form id="new-todo-form">
-          <h4>What's on your todo?</h4>
-          <input
-            type="text"
-            placeholder="e.g. Get some milk"
-            name="content"
-            id="content"
-          />
+          <h4>What's on your task?</h4>
+          <input type="text" placeholder="Task" name="content" id="content" />
 
           <h4>Pick a category</h4>
           <div class="options">
@@ -50,7 +45,7 @@
                 value="business"
               />
               <span class="bubble business"></span>
-              <div>Business</div>
+              <div>Priority Task</div>
             </label>
             <label>
               <input
@@ -60,18 +55,18 @@
                 value="personal"
               />
               <span class="bubble personal"></span>
-              <div>Personal</div>
+              <div>Regular Task</div>
             </label>
           </div>
 
-          <input type="submit" value="Add todo" />
+          <input type="submit" value="Add Task" />
         </form>
       </section>
       <!-- End of New Todo -->
 
       <!-- Todo List -->
       <section class="todo-list">
-        <h3>TODO LIST</h3>
+        <h3>TASK LIST</h3>
         <div class="list" id="todo-list"></div>
       </section>
       <!-- End of Todo List -->
