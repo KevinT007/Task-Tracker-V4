@@ -42,6 +42,7 @@ button {
   color: white;
   padding: 10px 18px;
   background-color: grey;
+  right: 50%;
 }
 
 button:hover {
@@ -63,7 +64,16 @@ button:hover {
   padding: 16px;
   background-color: lightgrey;
 }
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
 
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
