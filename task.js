@@ -8,13 +8,13 @@ const addBox = document.querySelector(".add-box"),
   addBtn = document.querySelector("button ");
 
 const months = [
-  "January",
+  {"January",
   "Febuary",
   "March",
   "April",
   "May",
   "June",
-  "July",
+  "July"},
   "August",
   "September",
   "October",
